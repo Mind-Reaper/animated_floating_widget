@@ -59,6 +59,12 @@ class _FloatingWidgetState extends State<FloatingWidget>
     calculateOffset(widget.direction!);
   }
 
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
   void calculateOffset(
     FloatingDirection direction,
   ) {
